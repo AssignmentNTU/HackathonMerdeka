@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+  #StartingTest{
+    display: none;
+    padding-top: 5px;
+  }
+</style>
+
+
+
+
+<body>
+<style type="text/css">
+ #header{
+ 	background-color: #888;
+ 	max-width: 100%;
+ 	height: 5%;
+ 	opacity: 0.8;
+ }
+ ul li{
+	list-style-type: none;
+ 	display: inline;
+ 	font-size: 30px;
+ 	padding: 10px;
+ 	color: #fff;
+ }
+ .form-group{
+   	max-width: 40%;
+ }
+
+
+
+</style>
+
+<div id="header">
+	<div id="Cacad">
+	<ul>
+		<li><a>Home</a></li>
+		<li><a>Faq</a></l1>
+	</ul>
+</div>
+</div>
+</div>
+<div class="container">
+  <div class="jumbotron">
+  	<center>
+    <h1>SIM AUTOMOTIC SYSTEM</h1>
+  	</center>
+  </div>
+</div>
+<script type="text/javascript">
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    var correctness = false;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (--timer < 0) {
+            timer = 0; 
+            correctness = true;
+        }
+        if(correctness){
+          $("#StartingTest").css("display","block");
+          console.log("timer: "+timer);
+        }
+
+    }, 1000);
+}
+
+jQuery(function ($) {
+  //pen atur waktunya dari sini
+    var fiveMinutes = 3,
+        display = $('#time');
+    startTimer(fiveMinutes, display);
+});
+</script>
+
+<h1>
+<center>
+<div>Test will begin in <span id="time"></span> minutes!</div>
+</h1>
+</center>
+<center>
+<button id="StartingTest">Start Test</button>
+</center>
+</body>
+</html>
