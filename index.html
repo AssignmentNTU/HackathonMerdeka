@@ -8,59 +8,70 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: #ededed">
 <style type="text/css">
  #header{
- 	background-color: #888;
- 	max-width: 100%;
- 	height: 5%;
- 	opacity: 0.8;
+  background-color: #ff9900;
+  max-width: 100%;
+  height: 100px;
+  opacity: 0.8;
+  padding-top: 10px;
+  border-bottom: 2px solid #cbcbcb;
  }
- ul li{
-	list-style-type: none;
- 	display: inline;
- 	font-size: 30px;
- 	padding: 10px;
- 	color: #fff;
+
+ #InputForm{
+  max-width: 33%;
+  height: 250px;
+  margin-top: 100px;
+  border-radius: 10px;
+ }
+
+ #loginButton{
+  max-width: 85%;
+ }
+
+ #usr{
+  display: block;
+  width: 85%;
+  height: 34px;
+  border:none;
+  border-color: transparent;
+  border-bottom: 2px solid #adadad;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 
  }
+
+ }
+
  .form-group{
- 	max-width: 40%;
+  max-width: 40%;
  }
-
-
 </style>
 
-<div id="header">
-	<div id="Cacad">
-	<ul>
-		<li><a>Home</a></li>
-		<li><a>Faq</a></l1>
-	</ul>
-</div>
-</div>
-<div class="container">
-  <div class="jumbotron">
-  	<center>
-    <h1>SIM AUTOMOTIC SYSTEM</h1>
-  	</center>
-  </div>
-</div>
-<center>
-<div id="InputForm">
-<form role="form">
-    <div class="form-group">
-      <label for="usr">Name:</label>
-      <input type="text" class="form-control" id="usr">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd">
-    </div>
-  </form>
-  <button id="Verified">Verified</button>
+<div id="header" style="text-align:center">
+    <h1 style="color:white; font-family:calibri; font-style:italic; letter-spacing:1.5px">
+      TES TEORI SIM
+    </h1>
 </div>
 
-</center>	
+<center>
+<div id="InputForm" style="background-color: white">
+<form role="form">
+    <div class="form-group">
+      <label for="usr" >
+        <h2 style="font-family:calibri; letter-spacing:1.5px">Masukan NIK</h2>
+      </label>
+      <input type="text" placeholder="NIK" id="usr">
+    </div>
+  </form>
+ <button class="btn btn-lg btn-primary btn-block" id="loginButton" onclick = login() style="font-family:calibri; letter-spacing:1.5px">
+  LANJUT
+</button>
+</div>
+
+</center> 
 </body>
 </html>
