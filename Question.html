@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Question By Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+<!-- 
+Ini buat css file nya
+-->
+<style type="text/css">
+ #header{
+  background-color: #888;
+  max-width: 100%;
+  height: 5%;
+  opacity: 0.8;
+ }
+ ul li{
+  list-style-type: none;
+  display: inline;
+  font-size: 20px;
+  padding: 10px;
+  color: #fff;
+
+ }
+#LogOut{
+  padding-left: 80%;
+  position: fixed;
+  cursor: pointer;
+}
+
+ .form-group{
+  max-width: 40%;
+ }
+
+ form{
+  padding: 10px;
+ }
+
+ form input{
+  padding : 10px;
+  width: 50%;
+  margin: 10px;
+ }
+
+ #SubmitQuestion{
+  width: 20%;
+ }
+
+</style>
+
+
+
+<script type="text/javascript">
+//ini buat log out pen
+$(document).ready(function(){
+  $('#LogOut').click(function(){
+      console.log("test clicked admin this");
+      window.location = 'index.html';
+    });
+
+});
+</script>
+
+
+
+<body>
+
+<div id="header">
+	<div id="Cacad">
+	<ul>
+	 <li><a>Home</a></li>
+    <li><a>Faq</a></l1>
+    <li id="LogOut">LogOut</li>
+	</ul>
+</div>
+</div>
+<div class="container">
+  <div class="jumbotron">
+  	<center>
+    <h1>Insert Question By Admin</h1>
+  	</center>
+  </div>
+</div>
+<center>
+<form id= "formEvents" method="POST" action="#" enctype="multipart/form-data">
+        <input name="Question" id="name_events" type="text" placeholder="Question"/><br/>
+        <input name="Answer Choice 1" id="Baquet" type="text" placeholder="Answer Choice 1"/><br/>
+        <input name="Answer Chocie 2" id="Breakouts" type="text" placeholder="Answer Choice 2"/><br/>
+        <input name="Answer Choice 3" id="NumberGuest" type="text" placeholder="Answer Choice 3"/><br/>  
+        <input name="Answer Choice 4" id="MeetAndFeed" type="text" placeholder="Answer Choice 4"/><br/>
+        <input name="Correct Answer" id="MeetingSpace" type="text" placeholder="CorrectAnswer"/><br/>
+        <input type="submit" placeholder="Add Event" name="Register" id="SubmitQuestion"/>     
+        <div id="post"></div>
+ </form>
+</body>
+</html>
