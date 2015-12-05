@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+<script type="text/javascript">
+//ini buat log out pen
+$(document).ready(function(){
+  $('#LogOut').click(function(){
+      console.log("test clicked admin this");
+      window.location = 'index.html';
+    });
+
+});
+</script>
+
+
+<body>
+<style type="text/css">
+ #header{
+ 	background-color: #888;
+ 	max-width: 100%;
+ 	height: 5%;
+ 	opacity: 0.8;
+ }
+ ul li{
+	list-style-type: none;
+ 	display: inline;
+ 	font-size: 20px;
+ 	padding: 10px;
+ 	color: #fff;
+
+ }
+ .form-group{
+ 	max-width: 40%;
+ }
+
+
+ #LogOut{
+  padding-left: 80%;
+  position: fixed;
+  cursor: pointer;
+}
+
+
+</style>
+
+<div id="header">
+	<div id="Cacad">
+	<ul>
+    <li><a>Home</a></li>
+    <li><a>Faq</a></l1>
+    <li id="LogOut">LogOut</li>
+	</ul>
+</div>
+</div>
+<div class="container">
+  <div class="jumbotron">
+  	<center>
+    <h1>Hi Admin</h1>
+  	</center>
+  </div>
+</div>
+<center>
+<div id="InputForm">
+<form role="form">
+    <div class="form-group">
+      <label for="usr">Id Admin:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+  	
+  </form>
+  <button id="adminClick">Verified</button>
+	<script>
+	$('#adminClick').on('click', function() { window.location = 'Question.php'; });
+	</script>
+</div>
+</center>	
+</body>
+</html>
